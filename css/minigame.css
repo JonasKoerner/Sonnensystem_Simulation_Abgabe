@@ -1,0 +1,53 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/img/background.jpg);
+
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: min(200%, 5vmin);
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+.oberfläche {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border: 10px solid white;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+
+
+
+.buttons {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #4f4193;
+    background: transparent;
+    color: #4f4193;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.buttons:hover {
+    transition: all 500ms ease;
+    background-color: #4f4193;
+    color: white;
+}
+.buttonsdiv {
+    padding: 700px;
+    text-align: center;
+}
