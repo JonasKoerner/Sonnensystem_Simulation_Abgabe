@@ -10,22 +10,25 @@ body {
     font-size: min(200%, 5vmin);
     text-align: center;
     color: white;
-    margin: 0;
+
 }
-.oberfläche {
-    width: 400px;
-    height: 400px;
-    background-color: white;
-    border: 10px solid white;
+
+#oberflaeche{
+    width: 399px;
+    height: 399px;
+    background: #0c0c0c;
+    border: 5px solid #4f4193;
 
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-
-
 }
 
-
+#oberflaeche img{
+    width: 131px;
+    height: 131px;
+    border: 1px solid #4f4193;
+}
 
 
 .buttons {
@@ -48,6 +51,6 @@ body {
     color: white;
 }
 .buttonsdiv {
-    padding: 70px;
+    padding: 50px;
     text-align: center;
 }

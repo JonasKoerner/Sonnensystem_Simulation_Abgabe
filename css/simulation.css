@@ -3,3 +3,34 @@
     padding: 0;
     font-family: sans-serif;
 }
+
+dt{
+    font-weight: bold;
+}
+
+.steckbriefe{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/img/background.jpg);
+    font-family: sans-serif;
+    color: white;
+}
+
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #4f4193;
+    background: transparent;
+    color: #4f4193;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+button:hover {
+    transition: all 500ms ease;
+    background-color: #4f4193;
+    color: white;
+}

@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.info p{
+    color: white;
+    width: 85%;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+h1 {
+    background: linear-gradient(
+            to right,
+            hsl(272, 79%, 17%),
+            hsl(261, 38%, 58%)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding: 100px 0;
+    font-size: 10vmin;
+    line-height: 1.1;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(/img/background.jpg);
+
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: system-ui;
+    font-size: min(200%, 5vmin);
+}
+
+h1, p, body {
+    margin: 0;
+}
+
+p {
+    font-family: "Dank Mono", ui-monospace, monospace;
+}
+
+html {
+    block-size: 100%;
+    inline-size: 100%;
+}
+.buttons {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #4f4193;
+    background: transparent;
+    color: #4f4193;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.buttons:hover {
+    transition: all 500ms ease;
+    background-color: #4f4193;
+    color: white;
+}
+.buttonsdiv {
+    padding: 100px;
+    text-align: center;
+}
