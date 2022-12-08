@@ -173,7 +173,7 @@ function berechneNeptunPositionUndRotation(t, mesh) {
 
 let t = 0;
 // Wie schnell sich die Planeten um die Sonne bewegen sollen
-let speed = 1 / 60;
+// let speed = 1 / 60;
 const animate = () => {
     t += 1/60;
     berechneSonnenRotation(t, sonneMesh);
