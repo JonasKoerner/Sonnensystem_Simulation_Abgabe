@@ -67,6 +67,7 @@ const neptunMesh = erzeugePlanet(5, new THREE.Vector3(1505, 0, 0), "../img/neptu
 
 scene.add(sonneMesh, merkurMesh, venusMesh, erdeMesh, marsMesh, jupiterMesh, saturnMesh, uranusMesh, neptunMesh);
 
+// Jonny
 let raycaster = new THREE.Raycaster();
 document.body.onmousedown = function (event) {
     let mouse = new THREE.Vector2();
