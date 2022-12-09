@@ -1,3 +1,4 @@
+// Laurin und Kai
 var reihe = 3;
 var spalten = 3;
 
@@ -20,7 +21,7 @@ window.onload = function(){
             teil.addEventListener("dragover", dragOver); //bewegen der Maus während man ein Bild angeklickt hat
             teil.addEventListener("dragenter", dragEnter); //bewegen eines Bildes auf ein anderes
             teil.addEventListener("dragleave", dragLeave); // verlassen des alten Platzes
-            teil.addEventListener("drop", dragDrop);  //bewegen eines Bildes auf ein anderen und los und lassen
+            teil.addEventListener("drop", dragDrop);  //bewegen eines Bildes auf ein anderes und loslassen
             teil.addEventListener("dragend", dragEnd); //nach dragDrop, tauschen der Bilder
 
             document.getElementById("oberflaeche").append(teil)
@@ -45,7 +46,7 @@ function dragLeave() {
 }
 
 function dragDrop() {
-    platzhalterTeil = this; //this refers to the img tile being dropped on
+    platzhalterTeil = this; //das bezieht sich darauf, dass das Bild abgelegt wird
 }
 
 function dragEnd() {
