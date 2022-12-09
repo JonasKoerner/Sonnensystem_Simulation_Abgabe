@@ -1,4 +1,4 @@
-import * as THREE from "../lib/three.module.js"; //test
+import * as THREE from "../lib/three.module.js";
 import {OrbitControls} from "../lib/OrbitControls.js";
 
 // radius: Größe des Planeten
@@ -21,7 +21,7 @@ function onWindowResize(camera, renderer) {
 }
 
 
-let camera = new THREE.PerspectiveCamera(34, window.innerWidth / window.innerHeight, 1, 1000);
+let camera = new THREE.PerspectiveCamera(34, window.innerWidth / window.innerHeight, 1, 10000);
 camera.position.z = 128;
 
 let scene = new THREE.Scene();
@@ -54,15 +54,15 @@ let controls = new OrbitControls(camera, renderer.domElement);
 window.addEventListener("resize", () => onWindowResize(camera, renderer), false);
 
 // Alle Objekte der Animation hinzufügen:
-const sonneMesh = erzeugePlanet(8, new THREE.Vector3(0, 0, 0), "../img/sun.jpeg", "sonne");
-const merkurMesh = erzeugePlanet(2, new THREE.Vector3(16, 0, 0), "../img/mercury.png", "merkur");
-const venusMesh = erzeugePlanet(3, new THREE.Vector3(32, 0, 0), "../img/venus.jpeg", "venus");
-const erdeMesh = erzeugePlanet(4, new THREE.Vector3(48, 0, 0), "../img/earth.jpeg", "erde");
-const marsMesh = erzeugePlanet(3, new THREE.Vector3(64, 0, 0), "../img/mars.jpeg", "mars");
-const jupiterMesh = erzeugePlanet(7, new THREE.Vector3(80, 0, 0), "../img/jupiter.png", "jupiter");
-const saturnMesh = erzeugePlanet(6, new THREE.Vector3(96, 0, 0), "../img/saturn.png", "saturn");
-const uranusMesh = erzeugePlanet(5, new THREE.Vector3(112, 0, 0), "../img/uranus.png", "uranus");
-const neptunMesh = erzeugePlanet(5, new THREE.Vector3(128, 0, 0), "../img/neptune.png", "neptun");
+const sonneMesh = erzeugePlanet(10, new THREE.Vector3(0, 0, 0), "../img/sun.jpeg", "sonne");
+const merkurMesh = erzeugePlanet(1, new THREE.Vector3(40, 0, 0), "../img/mercury.png", "merkur");
+const venusMesh = erzeugePlanet(2, new THREE.Vector3(72, 0, 0), "../img/venus.jpeg", "venus");
+const erdeMesh = erzeugePlanet(2.5, new THREE.Vector3(100, 0, 0), "../img/earth.jpeg", "erde");
+const marsMesh = erzeugePlanet(1.25, new THREE.Vector3(153, 0, 0), "../img/mars.jpeg", "mars");
+const jupiterMesh = erzeugePlanet(8, new THREE.Vector3(519, 0, 0), "../img/jupiter.png", "jupiter");
+const saturnMesh = erzeugePlanet(7, new THREE.Vector3(958, 0, 0), "../img/saturn.png", "saturn");
+const uranusMesh = erzeugePlanet(5.5, new THREE.Vector3(1920, 0, 0), "../img/uranus.png", "uranus");
+const neptunMesh = erzeugePlanet(5, new THREE.Vector3(3010, 0, 0), "../img/neptune.png", "neptun");
 
 scene.add(sonneMesh, merkurMesh, venusMesh, erdeMesh, marsMesh, jupiterMesh, saturnMesh, uranusMesh, neptunMesh);
 
@@ -94,32 +94,32 @@ document.body.onmousedown = function (event) {
         document.getElementById("steckbrief-" + intersects[0].object.name).style.display = "block";
     }
 };
-//test//
+
 function berechneSonnenRotation(t, mesh) {
-    mesh.rotation.set(5*t, 0, 0);
+    mesh.rotation.set(2.5*t, 0, 0);
 }
 
 function berechneMerkurPositionUndRotation(t, mesh) {
-    let r1 = 10.0;
-    let v1 = 1
+    let r1 = 40;
+    let v1 = 47.9;
     let x1 = r1*Math.cos(v1*t);
     let z1 = r1*Math.sin(v1*t);
     mesh.position.set(x1, 0, z1);
-    mesh.rotation.set(5*t, 0, 0);
+    mesh.rotation.set(2*t, 0, 0);
 }
 
 function berechneVenusPositionUndRotation(t, mesh) {
-    let r2 = 15.0;
-    let v2 = 1;
+    let r2 = 72;
+    let v2 = 35;
     let x2 = r2*Math.cos(v2*t);
     let z2 = r2*Math.sin(v2*t);
     mesh.position.set(x2, 0, z2);
-    mesh.rotation.set(5*t, 0, 0);
+    mesh.rotation.set(0.01*t, 0, 0);
 }
 
 function berechneErdPositionUndRotation(t, mesh) {
-    let r3 = 20.0;
-    let v3 = 1;
+    let r3 = 100;
+    let v3 = 29.8;
     let x3 = r3*Math.cos(v3*t);
     let z3 = r3*Math.sin(v3*t);
     mesh.position.set(x3, 0, z3);
@@ -127,8 +127,8 @@ function berechneErdPositionUndRotation(t, mesh) {
 }
 
 function berechneMarsPositionUndRotation(t, mesh) {
-    let r4 = 25.0;
-    let v4 = 1;
+    let r4 = 153;
+    let v4 = 24.1;
     let x4 = r4*Math.cos(v4*t);
     let z4 = r4*Math.sin(v4*t);
     mesh.position.set(x4, 0, z4);
@@ -136,8 +136,8 @@ function berechneMarsPositionUndRotation(t, mesh) {
 }
 
 function berechneJupiterPositionUndRotation(t, mesh) {
-    let r5 = 30.0;
-    let v5 = 1;
+    let r5 = 519;
+    let v5 = 13.1;
     let x5 = r5*Math.cos(v5*t);
     let z5 = r5*Math.sin(v5*t);
     mesh.position.set(x5, 0, z5);
@@ -145,8 +145,8 @@ function berechneJupiterPositionUndRotation(t, mesh) {
 }
 
 function berechneSaturnPositionUndRotation(t, mesh) {
-    let r6 = 35.0;
-    let v6 = 1;
+    let r6 = 958;
+    let v6 = 9.6;
     let x6 = r6*Math.cos(v6*t);
     let z6 = r6*Math.sin(v6*t);
     mesh.position.set(x6, 0, z6);
@@ -154,8 +154,8 @@ function berechneSaturnPositionUndRotation(t, mesh) {
 }
 
 function berechneUranusPositionUndRotation(t, mesh) {
-    let r7 = 40.0;
-    let v7 = 1;
+    let r7 = 1920;
+    let v7 = 6.8;
     let x7 = r7*Math.cos(v7*t);
     let z7 = r7*Math.sin(v7*t);
     mesh.position.set(x7, 0, z7);
@@ -163,8 +163,8 @@ function berechneUranusPositionUndRotation(t, mesh) {
 }
 
 function berechneNeptunPositionUndRotation(t, mesh) {
-    let r8 = 45.0;
-    let v8 = 1;
+    let r8 = 3010;
+    let v8 = 5.4;
     let x8 = r8*Math.cos(v8*t);
     let z8 = r8*Math.sin(v8*t);
     mesh.position.set(x8, 0, z8);
@@ -175,7 +175,7 @@ let t = 0;
 // Wie schnell sich die Planeten um die Sonne bewegen sollen
 // let speed = 1 / 60;
 const animate = () => {
-    t += 1/60;
+    t += 1/3600;
     berechneSonnenRotation(t, sonneMesh);
     berechneMerkurPositionUndRotation(t, merkurMesh);
     berechneVenusPositionUndRotation(t, venusMesh);
